@@ -1,0 +1,98 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h3 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 850px;
+  width: 100%;
+}
+
+.sub-label {
+  display: block;
+  text-align: left;
+  max-width: 380px;
+  margin: 0 auto 10px auto;
+  font-weight: bold;
+}
+
+.product-name,
+.product-details {
+  display: block;
+  text-align: left;
+  margin: 10px 35px;
+  width: 350px;
+  max-width: 90%;
+  height: 100px;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #368636;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.generated-description {
+  position: relative;
+  top: -23px;
+}
+
+.generated-description p {
+  line-height: 1.8;
+  font-size: 16px;
+  text-align: left;
+  padding: 8px;
+  margin-top: 10px;
+  border-left: 3px solid #368636;
+  border-radius: 10px;
+  background-color: #e0ece0;
+  width: 600px;
+  max-width: 90%;
+  height: 270px;
+}
+
+.button {
+  margin: 20px auto;
+  padding: 13px;
+  width: 35%;
+  border-radius: 15px;
+  border: none;
+  background-color: #3c883c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #207420;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #368636;
+}
