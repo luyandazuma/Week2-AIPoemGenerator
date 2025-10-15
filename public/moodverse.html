@@ -1,5 +1,3 @@
-Landing page html: 
-
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -10,23 +8,33 @@ Landing page html:
 </head>
 <body>
   <header>
-    <h1>MuseMind</h1>
+    <h1>MoodVerse</h1>
   </header>
 
   <main class="card-container">
-    <a href="lovelines.html" class="theme-card" data-theme="valentine">
-      <h2>LoveLines</h2>
-    </a>
-    <a href="moodverse.html" class="theme-card" data-theme="dracula">
-      <h2>MoodVerse</h2>
-    </a>
-    <a href="sourcescript.html" class="theme-card" data-theme="garden">
-      <h2>SourceScript</h2>
-    </a>
+ <div class="container">
+        <form id="form-group">
+          <label class="sub-label">What are you feeling?</label>
+          <textarea
+            class="product-details"
+            id="user-instructions-product-details"
+            placeholder="I want to express that I am feeling ..."
+            required
+            autofocus
+          ></textarea>
+
+          <input type="submit" class="button" id="button" value="GENERATE" />
+        </form>
+
+        <div class="generated-description">
+          <h3>Generated Poem</h3>
+          <p id="description"></p>
+        </div>
+      </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 MuseMind</p>
+    <p>&copy; 2025 MuseMind - Created by Git Girls</p>
   </footer>
 </body>
 </html>
