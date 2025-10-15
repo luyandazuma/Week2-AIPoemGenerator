@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Poem Generator</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>AI Poem Generator</h1>
+    </header>
+    <main>
+      <div class="container">
+        <form id="form-group">
+          <label class="sub-label">Product Name</label>
+          <textarea
+            class="product-name"
+            id="user-instructions-product-name"
+            placeholder="wooden truck toy"
+            required
+            autofocus
+          ></textarea>
+
+          <label class="sub-label">Product Details</label>
+          <textarea
+            class="product-details"
+            id="user-instructions-product-details"
+            placeholder="brown, polished wood, handmade, 50cm, truck toy, light weight, for children under 12"
+            required
+            autofocus
+          ></textarea>
+
+          <input type="submit" class="button" id="button" value="GENERATE" />
+        </form>
+
+        <div class="generated-description">
+          <h3>Generated Product Description</h3>
+          <p id="description"></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+     
+    </footer>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
