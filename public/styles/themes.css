@@ -1,0 +1,106 @@
+html[data-theme="synthwave"],
+[data-theme="synthwave"] {
+  color-scheme: dark;
+  
+  /* Primary colors - Neon Pink */
+  --primary: #ff006e;
+  --primary-focus: #e6005c;
+  --primary-content: #ffffff;
+  
+  /* Secondary colors - Cyan */
+  --secondary: #00d9ff;
+  --secondary-focus: #00c7e6;
+  --secondary-content: #000000;
+  
+  /* Accent colors - Purple */
+  --accent: #9d4edd;
+  --accent-focus: #8a3fc6;
+  --accent-content: #ffffff;
+  
+  /* Neutral colors */
+  --neutral: #3a0ca3;
+  --neutral-focus: #240046;
+  --neutral-content: #e0aaff;
+  
+  /* Base colors - Dark purple/black */
+  --base-100: #0a0e27;
+  --base-200: #16213e;
+  --base-300: #1a1f3a;
+  --base-content: #e0aaff;
+}
+
+[data-theme="synthwave"] {
+  background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0a0e27 100%);
+  background-attachment: fixed;
+  color: var(--base-content);
+}
+
+[data-theme="synthwave"] body {
+  background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0a0e27 100%);
+  background-attachment: fixed;
+}
+
+[data-theme="synthwave"] header {
+  background: rgba(16, 33, 62, 0.8);
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+}
+
+[data-theme="synthwave"] h1,
+[data-theme="synthwave"] h2,
+[data-theme="synthwave"] h3 {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+}
+
+[data-theme="synthwave"] .button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+}
+
+[data-theme="synthwave"] .button:hover {
+  background-color: var(--primary-focus);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.8);
+}
+
+[data-theme="synthwave"] .user-input-feelings,
+[data-theme="synthwave"] .product-details {
+  border-color: var(--secondary);
+  background-color: rgba(0, 217, 255, 0.05);
+  color: var(--base-content);
+}
+
+[data-theme="synthwave"] .card {
+  background-color: rgba(16, 33, 62, 0.6);
+  border: 2px solid var(--secondary);
+  color: var(--base-content);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
+
+[data-theme="synthwave"] .card h2 {
+  color: var(--secondary);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+[data-theme="synthwave"] .card p {
+  color: var(--base-content);
+}
+
+[data-theme="synthwave"] .generated-poem p,
+[data-theme="synthwave"] .generated-description p {
+  border-left-color: var(--primary);
+  background-color: rgba(255, 0, 110, 0.15);
+  color: var(--base-content);
+}
+
+[data-theme="synthwave"] footer {
+  background: rgba(16, 33, 62, 0.8);
+  border-top: 2px solid var(--primary);
+}
+
+[data-theme="synthwave"] a {
+  color: var(--secondary);
+}
