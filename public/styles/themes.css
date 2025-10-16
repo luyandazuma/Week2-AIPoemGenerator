@@ -1,0 +1,80 @@
+html[data-theme="valentine"],
+[data-theme="valentine"] {
+  color-scheme: light;
+  
+  /* Primary colors - Pink/Rose */
+  --primary: #f64a8a;
+  --primary-focus: #f41e74;
+  --primary-content: #ffffff;
+  
+  /* Secondary colors - Pink accent */
+  --secondary: #f926c2;
+  --secondary-focus: #d61a9c;
+  --secondary-content: #ffffff;
+  
+  /* Accent colors - Rose */
+  --accent: #f8757e;
+  --accent-focus: #f45359;
+  --accent-content: #ffffff;
+  
+  /* Neutral colors */
+  --neutral: #3d4451;
+  --neutral-focus: #2a2e37;
+  --neutral-content: #ffffff;
+  
+  /* Base colors - Light */
+  --base-100: #fce4ec;
+  --base-200: #f8bbd0;
+  --base-300: #f48fb1;
+  --base-content: #1f2937;
+}
+
+[data-theme="valentine"] {
+  background-color: #ffffff;
+  color: var(--base-content);
+}
+
+[data-theme="valentine"] h1,
+[data-theme="valentine"] h2,
+[data-theme="valentine"] h3 {
+  color: var(--primary);
+}
+
+[data-theme="valentine"] .button {
+  background-color: var(--primary);
+  color: var(--primary-content);
+  border: none;
+}
+
+[data-theme="valentine"] .button:hover {
+  background-color: var(--primary-focus);
+  color: var(--primary-content);
+}
+
+[data-theme="valentine"] .user-input-feelings,
+[data-theme="valentine"] .product-details {
+  border-color: var(--primary);
+  background-color: rgba(246, 74, 138, 0.05);
+  color: var(--base-content);
+}
+
+[data-theme="valentine"] .card {
+  background-color: var(--base-100);
+  border: 2px solid var(--primary);
+  color: var(--base-content);
+}
+
+[data-theme="valentine"] .card h2 {
+  color: var(--primary);
+}
+
+[data-theme="valentine"] .generated-poem p,
+[data-theme="valentine"] .generated-description p {
+  border-left-color: var(--primary);
+  background-color: rgba(246, 74, 138, 0.1);
+  color: var(--base-content);
+}
+
+[data-theme="valentine"] a {
+  color: var(--primary);
+}
