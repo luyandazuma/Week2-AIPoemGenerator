@@ -1,0 +1,97 @@
+html[data-theme="dracula"],
+[data-theme="dracula"] {
+  color-scheme: dark;
+  
+  /* Primary colors - Purple */
+  --primary: #bd93f9;
+  --primary-focus: #a57bda;
+  --primary-content: #282a36;
+  
+  /* Secondary colors - Pink */
+  --secondary: #ff79c6;
+  --secondary-focus: #ff5ab9;
+  --secondary-content: #282a36;
+  
+  /* Accent colors - Cyan */
+  --accent: #8be9fd;
+  --accent-focus: #6fe7f9;
+  --accent-content: #282a36;
+  
+  /* Neutral colors */
+  --neutral: #44475a;
+  --neutral-focus: #282a36;
+  --neutral-content: #f8f8f2;
+  
+  /* Base colors - Dark */
+  --base-100: #282a36;
+  --base-200: #21222c;
+  --base-300: #191a21;
+  --base-content: #f8f8f2;
+  
+  /* State colors */
+  --info: #8be9fd;
+  --success: #50fa7b;
+  --warning: #f1fa8c;
+  --error: #ff5555;
+}
+
+[data-theme="dracula"] body {
+  background-color: var(--base-100);
+  color: var(--base-content);
+}
+
+[data-theme="dracula"] h1,
+[data-theme="dracula"] h2,
+[data-theme="dracula"] h3 {
+  color: var(--primary);
+}
+
+[data-theme="dracula"] header {
+  background-color: var(--base-200);
+  color: var(--base-content);
+}
+
+[data-theme="dracula"] .button {
+  background-color: var(--primary);
+  color: var(--primary-content);
+  border: none;
+}
+
+[data-theme="dracula"] .button:hover {
+  background-color: var(--primary-focus);
+}
+
+[data-theme="dracula"] .product-details {
+  border-color: var(--primary);
+  background-color: rgba(189, 147, 249, 0.1);
+  color: var(--base-content);
+}
+
+[data-theme="dracula"] .card {
+  background-color: var(--base-200);
+  border-color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+[data-theme="dracula"] .card h2 {
+  color: var(--accent);
+}
+
+[data-theme="dracula"] .card p {
+  color: var(--base-content);
+}
+
+[data-theme="dracula"] .generated-description {
+  background-color: var(--base-200);
+}
+
+[data-theme="dracula"] .generated-description p {
+  border-left-color: var(--primary);
+  background-color: rgba(189, 147, 249, 0.15);
+  color: var(--base-content);
+}
+
+[data-theme="dracula"] footer {
+  background-color: var(--base-200);
+  color: var(--base-content);
+}
