@@ -36,7 +36,7 @@ We wanted to build something that does not just generate text, but **transforms 
 - JavaScript — Interactivity and user input handling  
 
 **Backend:**  
-- Node.js + Express.js — Handles API requests  
+- Node.js + Express.js — Runs JavaScript on server and handles API requests  
 - Hugging Face Inference API — Powers AI poem generation  
 - `.env` — Stores sensitive API keys securely  
 
