@@ -14,6 +14,7 @@
 
   <main class="card-container">
  <div class="container">
+  <div class="form-section">
         <form id="form-group">
           <label class="sub-label">What are you feeling?</label>
           <textarea
@@ -23,15 +24,17 @@
             required
             autofocus
           ></textarea>
-
           <input type="submit" class="button" id="button" value="GENERATE" />
         </form>
-
-        <div class="user-input-feelings product-details">
-          <h3>Generated Poem</h3>
-          <p id="poem"></p>
-        </div>
       </div>
+
+      <div class="output-section">
+        <h3>Generated Poem</h3>
+        <div class="generated-poem">
+        <p id="poem"></p>
+      </div>
+    </div>
+   </div>
   </main>
 
   <footer>
