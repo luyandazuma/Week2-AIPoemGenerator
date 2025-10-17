@@ -141,7 +141,8 @@ main {
    FORM INPUTS
    ============================================ */
 
-
+.product-name,
+.product-details,
 .user-input-feelings {
   display: block;
   text-align: left;
@@ -157,6 +158,8 @@ main {
   box-sizing: border-box;
 }
 
+.product-name:focus,
+.product-details:focus,
 .user-input-feelings:focus {
   outline: none;
   border-color: #368636;
@@ -167,12 +170,13 @@ main {
    GENERATED CONTENT
    ============================================ */
 
-
+.generated-description,
 .generated-poem {
   position: relative;
   top: -23px;
 }
 
+.generated-description p,
 .generated-poem p {
   line-height: 1.8;
   font-size: 16px;
@@ -277,13 +281,13 @@ a:hover {
     width: 50%;
   }
 
-  
+  .product-details,
   .user-input-feelings {
     width: 90%;
     margin: 10px auto;
   }
 
-  
+  .generated-description p,
   .generated-poem p {
     width: 90%;
     height: auto;
@@ -325,7 +329,7 @@ a:hover {
     font-size: 14px;
   }
 
-  
+  .generated-description p,
   .generated-poem p {
     font-size: 14px;
     padding: 6px;

@@ -52,7 +52,7 @@ html[data-theme="valentine"],
 }
 
 [data-theme="valentine"] .user-input-feelings,
-[data-theme="valentine"] {
+[data-theme="valentine"] .product-details {
   border-color: var(--primary);
   background-color: rgba(246, 74, 138, 0.05);
   color: var(--base-content);
@@ -69,7 +69,7 @@ html[data-theme="valentine"],
 }
 
 [data-theme="valentine"] .generated-poem p,
-[data-theme="valentine"]  {
+[data-theme="valentine"] .generated-description p {
   border-left-color: var(--primary);
   background-color: rgba(246, 74, 138, 0.1);
   color: var(--base-content);
@@ -148,7 +148,7 @@ html[data-theme="synthwave"],
 }
 
 [data-theme="synthwave"] .user-input-feelings,
-[data-theme="synthwave"]  {
+[data-theme="synthwave"] .product-details {
   border-color: var(--secondary);
   background-color: rgba(0, 217, 255, 0.05);
   color: var(--base-content);
@@ -171,7 +171,7 @@ html[data-theme="synthwave"],
 }
 
 [data-theme="synthwave"] .generated-poem p,
-[data-theme="synthwave"]  {
+[data-theme="synthwave"] .generated-description p {
   border-left-color: var(--primary);
   background-color: rgba(255, 0, 110, 0.15);
   color: var(--base-content);
@@ -249,7 +249,7 @@ html[data-theme="dracula"],
 }
 
 [data-theme="dracula"] .user-input-feelings,
-[data-theme="dracula"]  {
+[data-theme="dracula"] .product-details {
   border-color: var(--primary);
   background-color: rgba(189, 147, 249, 0.1);
   color: var(--base-content);
@@ -270,7 +270,7 @@ html[data-theme="dracula"],
 }
 
 [data-theme="dracula"] .generated-poem p,
-[data-theme="dracula"]  {
+[data-theme="dracula"] .generated-description p {
   border-left-color: var(--primary);
   background-color: rgba(189, 147, 249, 0.15);
   color: var(--base-content);
@@ -339,7 +339,7 @@ html[data-theme="garden"],
 }
 
 [data-theme="garden"] .user-input-feelings,
-[data-theme="garden"]  {
+[data-theme="garden"] .product-details {
   border-color: var(--primary);
   background-color: rgba(34, 197, 94, 0.05);
   color: var(--base-content);
@@ -356,7 +356,7 @@ html[data-theme="garden"],
 }
 
 [data-theme="garden"] .generated-poem p,
-[data-theme="garden"]  {
+[data-theme="garden"] .generated-description p {
   border-left-color: var(--primary);
   background-color: rgba(34, 197, 94, 0.1);
   color: var(--base-content);
