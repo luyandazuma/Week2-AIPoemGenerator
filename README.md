@@ -15,7 +15,7 @@ We wanted to build something that does not just generate text, but **transforms 
 1. The user selects a theme (LoveLines, SoulScript, or MoodVerse).  
 2. The user is redirected to the page where the poem will be generated and has to type an idea, emotion, or thought into the input field.  
 3. MuseMind combines a fixed prompt template with user input.  
-4. The backend sends this prompt to Hugging Face’s API.  
+4. The backend sends this prompt to Gemini’s API.  
 5. The AI returns a unique and beautiful poem matching the chosen theme and feelings.  
 
 
@@ -37,7 +37,7 @@ We wanted to build something that does not just generate text, but **transforms 
 
 **Backend:**  
 - Node.js + Express.js — Runs JavaScript on server and handles API requests  
-- Hugging Face Inference API — Powers AI poem generation  
+- Gemini API — Powers AI poem generation  
 - `.env` — Stores sensitive API keys securely  
 
 
