@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 let loveLinesCardElement = document.querySelector("#form-group");
 loveLinesCardElement.addEventListener("submit", callApi);
 
@@ -27,4 +25,3 @@ function generatePoem(response) {
     cursor: "",
   });
 }
->>>>>>> Stashed changes
