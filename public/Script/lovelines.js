@@ -7,7 +7,7 @@ function callApi(event) {
     "#user-input-feelings"
   );
   let prompt = `User instructions: Generate a short 5 line English poem about ${userInputFeelings.value} in basic HTLM format. Do not add a title of the poem.`;
-  let context = `You are love poem expert from Paris, France. You like writing romantic, loving, and sweet poems. Use the provided description of the user's feelings and emotions ${userInputFeelings.value} to create an inspiring and sweet love poem. Follow user instructions.`;
+  let context = `You are a love poem expert from Paris, France. You like writing romantic, loving, and sweet poems. Use the provided description of the user's feelings and emotions ${userInputFeelings.value} to create an inspiring and sweet love poem. Follow user instructions.`;
 
   new Typewriter("#poem", {
     strings: `Generating a love poem for you 🩷💞💌`,
