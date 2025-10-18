@@ -222,6 +222,5 @@ If you encounter any issues:
 Check browser console for errors.
 
 <h4>Made with 💜 by Git Girls</h4>
-
-Transform your emotions into poetry. One verse at a time. ✨_ 
+_Transform your emotions into poetry. One verse at a time. ✨_ 
 
