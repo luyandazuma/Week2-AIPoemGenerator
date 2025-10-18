@@ -219,8 +219,8 @@ If you encounter any issues:
 
 - Check that your Gemini API key is valid.
 - Ensure both frontend and backend servers are running.
-Check browser console for errors.
+- Check browser console for errors.
 
 <h4>Made with 💜 by Git Girls</h4>
-_Transform your emotions into poetry. One verse at a time. ✨_ 
+*Transform your emotions into poetry. One verse at a time. ✨*
 
