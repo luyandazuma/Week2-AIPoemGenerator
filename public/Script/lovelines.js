@@ -1,25 +1,71 @@
-let loveLinesCardElement = document.querySelector("#form-group");
-loveLinesCardElement.addEventListener("submit", callApi);
+const API_BASE_URL = 'http://localhost:3000/api';
 
-function callApi(event) {
+let loveLinesFormElement = document.querySelector("#form-group");
+loveLinesFormElement.addEventListener("submit", generateLovePoem);
+
+function generateLovePoem(event) {
   event.preventDefault();
-  let userInputFeelings = document.querySelector(
-    "#user-input-feelings"
-  );
-  let prompt = `User instructions: Generate a short 5 line English poem about ${userInputFeelings.value} in basic HTLM format. Do not add a title of the poem.`;
-  let context = `You are a love poem expert from Paris, France. You like writing romantic, loving, and sweet poems. Use the provided description of the user's feelings and emotions ${userInputFeelings.value} to create an inspiring and sweet love poem. Follow user instructions.`;
+  
+  let userInputElement = document.querySelector("#user-input-feelings");
+  let poemElement = document.querySelector("#poem");
+  let userInput = userInputElement.value.trim();
 
+  // Validation
+  if (!userInput) {
+    poemElement.innerHTML = "Please share your feelings first! 💕";
+    return;
+  }
+
+  // Show loading animation
   new Typewriter("#poem", {
-    strings: `Generating a love poem for you 🩷💞💌`,
+    strings: "Crafting your love poem... 🩷💞💌",
     autoStart: true,
     delay: 20,
+    cursor: "",
   });
-  axios.get(apiUrl).then(generatePoem);
+
+  // Call backend API
+  fetch(`${API_BASE_URL}/generate-poem`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userInput: userInput,
+      theme: "lovelines",
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        return response.json().then((err) => {
+          throw new Error(err.error || "Failed to generate poem");
+        });
+      }
+      return response.json();
+    })
+    .then((data) => {
+      displayPoem(data.poem);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      poemElement.innerHTML = `
+      <em style="color: #e74c3c;">
+        ❌ ${error.message}<br><br>
+        Please try again or contact support if the issue persists.
+      </em>
+    `;
+    });
 }
 
-function generatePoem(response) {
+function displayPoem(poemText) {
+  const poemElement = document.querySelector("#poem");
+  
+  // Format the poem with line breaks
+  const formattedPoem = poemText.replace(/\n/g, '<br>');
+  
+  // Display with typewriter effect
   new Typewriter("#poem", {
-    strings: response.data.answer,
+    strings: formattedPoem,
     autoStart: true,
     delay: 20,
     cursor: "",
