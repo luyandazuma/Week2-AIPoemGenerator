@@ -16,12 +16,12 @@ We wanted to build something that does not just generate text, but **transforms 
 Three Themed Experiences:
 - 💕 LoveLines
 - 🎨 MoodVerse
-- 🌟 SoulScript 
+- 🌟 SoulScript   
 
-- AI-Powered Generation - Utilizes Google Gemini API for intelligent, contextual poem creation
-- Real-time Generation - Watch your poem appear with smooth typewriter animation
-- Beautiful Themed UI - Each theme has its own unique visual aesthetic
-- Responsive Design - Works seamlessly on desktop, tablet, and mobile devices
+AI-Powered Generation - Utilizes Google Gemini API for intelligent, contextual poem creation.  
+Real-time Generation - Watch your poem appear with smooth typewriter animation.  
+Beautiful Themed UI - Each theme has its own unique visual aesthetic.  
+Responsive Design - Works seamlessly on desktop, tablet, and mobile devices.  
 
 
 ## How MuseMind Works
@@ -62,12 +62,11 @@ Three Themed Experiences:
 ## How to Run:
 
 **Prerequisites**
-- Node.js (v14 or higher)
-- npm (comes with Node.js.
-- Google Gemini API key [Get one here](https://aistudio.google.com/app/apikey)
+Node.js (v14 or higher).  
+npm (comes with Node.js.  
+Google Gemini API key [Get one here](https://aistudio.google.com/app/apikey).  
 
-**1. Clone the Repository**
-
+**1. Clone the Repository**  
 Open your terminal and run:
 
 ``` bash
@@ -82,13 +81,10 @@ cd server
 npm install
 ```
 
-**3. Configure Environment Variables**
-
-Create a .env file in the server folder:
-
-Copy the content from .env.example into your new .env file.
-
-Add your Gemini API key:
+**3. Configure Environment Variables**  
+Create a .env file in the server folder.  
+Copy the content from .env.example into your new .env file.  
+Add your Gemini API key:  
 
 ```
 # GEMINI_API_KEY=your_actual_gemini_api_key_here
@@ -103,14 +99,14 @@ npm run dev
 🖥️ The backend will run on http://localhost:3000 by default.
 
 **5. Serve the Frontend**
-Open a new terminal window:
+Open a new terminal window:  
 
 ```bash
 cd ../public
 npx http-server -p 8080
 ```
 
-Or use Live Server extension in VS Code.
+Or use Live Server extension in VS Code.  
 *The frontend will run on http://localhost:8080*
 
 **6. Open in Browswer**
@@ -137,7 +133,7 @@ SoulScript- Generated Poem
 
 ## API Documentation
 
-**Backend Endpoints**
+**Backend Endpoints**  
 **Health Check**
 
 ```
@@ -205,13 +201,12 @@ Week2-AIPoemGenerator/
 
 ## 🔒 Security Notes
 
-- ⚠️ Never commit .env files - They contain sensitive API keys.
-- ✅ Always use .env.example as a template for team members.
-- ✅ Regenerate API keys if accidentally exposed.
-- ✅ Use environment variables for all secrets.
+⚠️ Never commit .env files - They contain sensitive API keys.  
+✅ Always use .env.example as a template for team members.  
+✅ Regenerate API keys if accidentally exposed.  
+✅ Use environment variables for all secrets.  
 
 ## 📄 License
-
 This project was created as part of a coding bootcamp group project.
 
 ## 📞 Support
@@ -221,6 +216,6 @@ If you encounter any issues:
 - Ensure both frontend and backend servers are running.
 - Check browser console for errors.
 
-<h4>Made with 💜 by Git Girls</h4>
+<h4>Made with 💜 by Git Girls</h4>  
 *Transform your emotions into poetry. One verse at a time. ✨*
 
