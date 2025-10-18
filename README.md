@@ -221,6 +221,7 @@ If you encounter any issues:
 - Ensure both frontend and backend servers are running.
 Check browser console for errors.
 
-**Made with 💜 by Git Girls**
-_Transform your emotions into poetry. One verse at a time. ✨_ 
+<h4>Made with 💜 by Git Girls</h4>
+
+Transform your emotions into poetry. One verse at a time. ✨_ 
 
