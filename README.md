@@ -209,8 +209,6 @@ If you encounter any issues:
 - Ensure both frontend and backend servers are running.
 - Check browser console for errors.
 
-<h4>Made with 💜 by Git Girls</h4>  
-Transform your emotions into poetry. One verse at a time.
 
 ## 👩🏽‍💻 The Git Girls Team
 
@@ -220,4 +218,7 @@ Transform your emotions into poetry. One verse at a time.
 | **Boikanyo Maswi** | Junior Developer. | README.md, inetractivity and user input handling, GitHub About section |
 | **Luyanda Zuma** | Scrum Master. | Project management, repository setup, inetractivity and user input handling, documentation. |
 | **Nqobile Masombuka** | Fullstack Developer. | Page styling, Backend Integration & API Development, Application deployment, documentation, README.md. |
+
+<h4>Made with 💜 by Git Girls</h4>  
+<em>Transform your emotions into poetry. One verse at a time.</em>
 
