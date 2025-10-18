@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = "https://musemind.onrender.com";
 
 let soulScriptFormElement = document.querySelector("#form-group");
 soulScriptFormElement.addEventListener("submit", generateSoulPoem);
