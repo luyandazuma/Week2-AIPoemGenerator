@@ -1,5 +1,5 @@
 # MuseMind — AI Poem Generator
-<h3>Your Mood. Our Muse</h3>
+<h3>Your Mood. Our Muse.</h3>
 
 MuseMind is an AI-powered web application that transforms your feelings, emotions, and mood into personalised poems. Choose a theme, type your prompt, and let AI weave your words into art that captures how you feel and thoughtfully espresses it.
 
@@ -13,7 +13,7 @@ We wanted to build something that does not just generate text, but **transforms 
 
 ## Features
 
-Three Themed Experiences:
+Three Themes. One Custom Creation:
 - 💕 LoveLines
 - 🎨 MoodVerse
 - 🌟 SoulScript   
@@ -34,17 +34,17 @@ Responsive Design - Works seamlessly on desktop, tablet, and mobile devices.
 6. Users cab regenerate another poem by clicking the "Generate" button again.
 
 
-## Themes:
+## Themes
 
 | Theme | Description | Tone |
 |-------|--------|-------------|
 | **LoveLines** (Pinks, roses and whites) | Heartfelt poems for loved ones. |  Romantic, emotional, and warm. |
 | **MoodVerse** (Neon pinks, cyans, deep purples) | Expressive poems based on your current feelings or mood | Emotive and expressive. 
-| **SoulScript** (Deep purples, cyans, dark backgrounds) | Affirming and kind words to positively influence ones sense of self. | Assuring, uplifting and gentle. |
+| **SoulScript** (Purples, muted tones and background) | Affirming and kind words to positively influence ones sense of self. | Assuring, uplifting and gentle. |
 
 
 
-## Tech Stack:
+## Tech Stack
 
 **Frontend:**  
 - HTML — Structure and content.
@@ -59,9 +59,10 @@ Responsive Design - Works seamlessly on desktop, tablet, and mobile devices.
 - dotenv - Environment variable management.
 
 
-## How to Run:
+## How to Run
 
 **Prerequisites**
+
 Node.js (v14 or higher).  
 npm (comes with Node.js.  
 Google Gemini API key [Get one here](https://aistudio.google.com/app/apikey).  
@@ -87,7 +88,7 @@ Copy the content from .env.example into your new .env file.
 Add your Gemini API key:  
 
 ```
-# GEMINI_API_KEY=your_actual_gemini_api_key_here
+GEMINI_API_KEY=your_actual_gemini_api_key_here
 ```
 
 **4. Start the Backend Server:**
@@ -96,7 +97,7 @@ Add your Gemini API key:
 npm run dev
 ```
 
-🖥️ The backend will run on http://localhost:3000 by default.
+The backend will run on http://localhost:3000 by default.
 
 **5. Serve the Frontend**
 Open a new terminal window:  
@@ -110,7 +111,7 @@ Or use Live Server extension in VS Code.
 *The frontend will run on http://localhost:8080*
 
 **6. Open in Browswer**
-Navigate to http://localhost:8080 and start creating poems!📝✨
+Navigate to http://localhost:8080 and start creating poems!
 
 Landing page: 
 <img width="1340" height="591" alt="2025-10-18 (9)" src="https://github.com/user-attachments/assets/ffa1da0c-f263-4cdb-baf4-fe58f5d1adc6" />
@@ -162,14 +163,6 @@ Response:
 }
 ```
 
-## 👩🏽‍💻 The Git Girls Team
-
-| Member | Role | Responsibilities |
-|---------|------|------------------|
-| **Aobakwe Modillane** | Frontend Developer. | Web content creation and page styling. |
-| **Boikanyo Maswi** | Junior Developer. | README.md, inetractivity and user input handling, GitHub About section |
-| **Luyanda Zuma** | Scrum Master. | Project management, repository setup, inetractivity and user input handling, documentation. |
-| **Nqobile Masombuka** | Fullstack Developer. | Page styling, Backend Integration & API Development, Application deployment, documentation, README.md. |
 
 ## Project Structure
 
@@ -199,23 +192,33 @@ Week2-AIPoemGenerator/
 ```
 
 
-## 🔒 Security Notes
+## Security Notes
 
 ⚠️ Never commit .env files - They contain sensitive API keys.  
-✅ Always use .env.example as a template for team members.  
-✅ Regenerate API keys if accidentally exposed.  
-✅ Use environment variables for all secrets.  
+✔️ Always use .env.example as a template for team members.  
+✔️ Regenerate API keys if accidentally exposed.  
+✔️ Use environment variables for all secrets.  
 
-## 📄 License
-This project was created as part of a coding bootcamp group project.
+## License
+This project was created as part of a coding bootcamp group genrative AI project.
 
-## 📞 Support
+## Support
 If you encounter any issues:
 
 - Check that your Gemini API key is valid.
 - Ensure both frontend and backend servers are running.
 - Check browser console for errors.
 
+
+## 👩🏽‍💻 The Git Girls Team
+
+| Member | Role | Responsibilities |
+|---------|------|------------------|
+| **Aobakwe Modillane** | Frontend Developer. | Web content creation and page styling. |
+| **Boikanyo Maswi** | Junior Developer. | README.md, inetractivity and user input handling, GitHub About section |
+| **Luyanda Zuma** | Scrum Master. | Project management, repository setup, inetractivity and user input handling, documentation. |
+| **Nqobile Masombuka** | Fullstack Developer. | Page styling, Backend Integration & API Development, Application deployment, documentation, README.md. |
+
 <h4>Made with 💜 by Git Girls</h4>  
-_Transform your emotions into poetry. One verse at a time. ✨_
+<em>Transform your emotions into poetry. One verse at a time.</em>
 
