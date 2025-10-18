@@ -11,7 +11,7 @@ Have you ever felt something deeply but could not find the words to express it? 
 We wanted to build something that does not just generate text, but **transforms feeling into form**. MuseMind explores how AI can become a creative partner, helping anyone find the words to give what is in their heart artistic shape through language.
 
 
-## 🌟 Features
+## Features
 
 Three Themed Experiences:
 - 💕 LoveLines
