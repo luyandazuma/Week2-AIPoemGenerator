@@ -14,14 +14,14 @@ We wanted to build something that does not just generate text, but **transforms 
 ## 🌟 Features
 
 Three Themed Experiences:
-💕 LoveLines 
-🎨 MoodVerse 
-🌟 SoulScript 
+- 💕 LoveLines
+- 🎨 MoodVerse
+- 🌟 SoulScript 
 
-AI-Powered Generation - Utilizes Google Gemini API for intelligent, contextual poem creation
-Real-time Generation - Watch your poem appear with smooth typewriter animation
-Beautiful Themed UI - Each theme has its own unique visual aesthetic
-Responsive Design - Works seamlessly on desktop, tablet, and mobile devices
+- AI-Powered Generation - Utilizes Google Gemini API for intelligent, contextual poem creation
+- Real-time Generation - Watch your poem appear with smooth typewriter animation
+- Beautiful Themed UI - Each theme has its own unique visual aesthetic
+- Responsive Design - Works seamlessly on desktop, tablet, and mobile devices
 
 
 ## How MuseMind Works
@@ -62,11 +62,12 @@ Responsive Design - Works seamlessly on desktop, tablet, and mobile devices
 ## How to Run:
 
 **Prerequisites**
-Node.js (v14 or higher)
-npm (comes with Node.js)
-Google Gemini API key [Get one here](https://aistudio.google.com/app/apikey)
+- Node.js (v14 or higher)
+- npm (comes with Node.js.
+- Google Gemini API key [Get one here](https://aistudio.google.com/app/apikey)
 
 **1. Clone the Repository**
+
 Open your terminal and run:
 
 ``` bash
@@ -190,20 +191,21 @@ Response:
 
 ## 🔒 Security Notes
 
-⚠️ Never commit .env files - They contain sensitive API keys
-✅ Always use .env.example as a template for team members
-✅ Regenerate API keys if accidentally exposed
-✅ Use environment variables for all secrets
+- ⚠️ Never commit .env files - They contain sensitive API keys.
+- ✅ Always use .env.example as a template for team members.
+- ✅ Regenerate API keys if accidentally exposed.
+- ✅ Use environment variables for all secrets.
 
 ## 📄 License
+
 This project was created as part of a coding bootcamp group project.
 
 ## 📞 Support
 If you encounter any issues:
 
-Check that your Gemini API key is valid
-Ensure both frontend and backend servers are running
-Check browser console for errors
+- Check that your Gemini API key is valid.
+- Ensure both frontend and backend servers are running.
+Check browser console for errors.
 
 **Made with 💜 by Git Girls**
 _Transform your emotions into poetry. One verse at a time. ✨_ 
