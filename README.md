@@ -1,5 +1,5 @@
 # MuseMind — AI Poem Generator
-<h3>**Your Mood. Our Muse**</h3>
+<h3>Your Mood. Our Muse</h3>
 
 MuseMind is an AI-powered web application that transforms your feelings, emotions, and mood into personalised poems. Choose a theme, type your prompt, and let AI weave your words into art that captures how you feel and thoughtfully espresses it.
 
