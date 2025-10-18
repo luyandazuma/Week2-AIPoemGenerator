@@ -85,8 +85,11 @@ npm install
 **3. Configure Environment Variables**
 
 Create a .env file in the server folder:
+
 Copy the content from .env.example into your new .env file.
+
 Add your Gemini API key:
+
 ```
 # GEMINI_API_KEY=your_actual_gemini_api_key_here
 ```
@@ -137,13 +140,15 @@ SoulScript- Generated Poem
 **Backend Endpoints**
 **Health Check**
 
-```GET /api/health
+```
+GET /api/health
 ```
 *Returns server status and timestamp.*
 
 **Generate Poem**
 
-```POST /api/generate-poem
+```
+POST /api/generate-poem
 Content-Type: application/json
 
 Body:
@@ -172,7 +177,8 @@ Response:
 
 ## Project Structure
 
-```Week2-AIPoemGenerator/
+```
+Week2-AIPoemGenerator/
 ├── public/                   # Frontend files
 │   ├── index.html            # Landing page
 │   ├── lovelines.html        # LoveLines theme page
