@@ -72,25 +72,29 @@ Open your terminal and run:
 
 ``` bash
 git clone https://github.com/luyandazuma/Week2-AIPoemGenerator.git
-cd Week2-AIPoemGenerator```
+cd Week2-AIPoemGenerator
+```
 
 **2. Install Backend Dependencies**
 
 ```bash
 cd server
-npm install```
+npm install
+```
 
 **3. Configure Environment Variables**
 
 ```# Create a .env file in the server folder:
 # Copy the content from .env.example into your new .env file.
 # Add your Gemini API key:
-# GEMINI_API_KEY=your_actual_gemini_api_key_here```
+# GEMINI_API_KEY=your_actual_gemini_api_key_here
+```
 
 **4. Start the Backend Server:**
 
 ```bash
-npm run dev```
+npm run dev
+```
 
 🖥️ The backend will run on http://localhost:3000 by default.
 
@@ -99,7 +103,8 @@ Open a new terminal window:
 
 ```bash
 cd ../public
-npx http-server -p 8080```
+npx http-server -p 8080
+```
 
 Or use Live Server extension in VS Code.
 *The frontend will run on http://localhost:8080*
@@ -131,7 +136,8 @@ SoulScript- Generated Poem
 **Backend Endpoints**
 **Health Check**
 
-```GET /api/health```
+```GET /api/health
+```
 *Returns server status and timestamp.*
 
 **Generate Poem**
@@ -151,7 +157,8 @@ Response:
   "poem": "string",       // Generated poem text
   "theme": "string",
   "timestamp": "string"
-}```
+}
+```
 
 ## 👩🏽‍💻 The Git Girls Team
 
@@ -165,7 +172,7 @@ Response:
 ## Project Structure
 
 ```Week2-AIPoemGenerator/
-├── public/                    # Frontend files
+├── public/                   # Frontend files
 │   ├── index.html            # Landing page
 │   ├── lovelines.html        # LoveLines theme page
 │   ├── moodverse.html        # MoodVerse theme page
@@ -179,14 +186,14 @@ Response:
 │       ├── moodverse.js      # MoodVerse functionality
 │       └── soulscript.js     # SoulScript functionality
 │
-├── server/                   # Backend files
+├── server/                  # Backend files
 │   ├── server.js            # Express server & API logic
 │   ├── package.json         # Dependencies
 │   ├── .env.example         # Environment variables template
 │   └── .gitignore           # Git ignore rules
-│
-├── .gitignore               # Root git ignore
-└── README.md                # This file```
+│               
+└── README.md                # This file
+```
 
 
 ## 🔒 Security Notes
