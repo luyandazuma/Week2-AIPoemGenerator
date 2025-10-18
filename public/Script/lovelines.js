@@ -18,7 +18,7 @@ function generateLovePoem(event) {
 
   // Show loading animation
   new Typewriter("#poem", {
-    strings: "Crafting your love poem... 🩷💞💌",
+    strings: "Crafting your love poem... 🩷💕💌",
     autoStart: true,
     delay: 20,
     cursor: "",

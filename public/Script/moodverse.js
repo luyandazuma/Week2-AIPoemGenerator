@@ -18,7 +18,7 @@ function generateMoodPoem(event) {
 
   // Show loading animation
   new Typewriter("#poem", {
-    strings: "Capturing your mood in verse... 🎨✨🌙",
+    strings: "Capturing your mood in verse... 🥚🐣🐥",
     autoStart: true,
     delay: 20,
     cursor: "",

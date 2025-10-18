@@ -18,7 +18,7 @@ function generateSoulPoem(event) {
 
   // Show loading animation
   new Typewriter("#poem", {
-    strings: "Writing your soul affirmation... 🌟💫✨",
+    strings: "Writing your soul affirmation... 🫧🐚🔮",
     autoStart: true,
     delay: 20,
     cursor: "",
