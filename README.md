@@ -88,7 +88,7 @@ Copy the content from .env.example into your new .env file.
 Add your Gemini API key:  
 
 ```
-# GEMINI_API_KEY=your_actual_gemini_api_key_here
+GEMINI_API_KEY=your_actual_gemini_api_key_here
 ```
 
 **4. Start the Backend Server:**
