@@ -84,9 +84,9 @@ npm install
 
 **3. Configure Environment Variables**
 
-# Create a .env file in the server folder:
-# Copy the content from .env.example into your new .env file.
-# Add your Gemini API key:
+Create a .env file in the server folder:
+Copy the content from .env.example into your new .env file.
+Add your Gemini API key:
 ```
 # GEMINI_API_KEY=your_actual_gemini_api_key_here
 ```
