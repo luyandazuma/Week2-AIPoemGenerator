@@ -12,15 +12,14 @@ const PORT = process.env.PORT || 3000;
 app.use(cors()); // Allow frontend to call backend
 app.use(express.json()); // Parse JSON request bodies
 
-// Hugging Face Configuration
-const HUGGING_FACE_API_KEY = process.env.HUGGING_FACE_TOKEN;
-const HUGGING_FACE_API_URL = "https://api-inference.huggingface.co/models/gpt2";
-
+// Gemini Configuration
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 // Health check endpoint
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    message: "MuseMind backend is running!",
+    message: "MuseMind backend is running with Gemini API!",
     timestamp: new Date().toISOString(),
   });
 });
@@ -38,8 +37,8 @@ app.post("/api/generate-poem", async (req, res) => {
     }
 
     // Check if API key exists
-    if (!HUGGING_FACE_API_KEY) {
-      console.error("ERROR: HUGGING_FACE_TOKEN not found in .env file!");
+    if (!GEMINI_API_KEY) {
+      console.error("ERROR: GEMINI_API_KEY not found in .env file!");
       return res.status(500).json({
         error: "Server configuration error. Please contact support.",
       });
@@ -52,29 +51,48 @@ app.post("/api/generate-poem", async (req, res) => {
       `Generating ${theme} poem for input: "${userInput.substring(0, 50)}..."`
     );
 
-    // Call Hugging Face API
+    // Call Gemini API
     const response = await axios.post(
-      HUGGING_FACE_API_URL,
+      GEMINI_API_URL,
       {
-        inputs: prompt,
-        parameters: {
-          max_length: 200,
-          temperature: 0.8,
-          top_p: 0.9,
-          return_full_text: false,
+        contents: [
+          {
+            parts: [
+              {
+                text: prompt,
+              },
+            ],
+          },
+        ],
+        generationConfig: {
+          temperature: 0.9,
+          topK: 40,
+          topP: 0.95,
+          maxOutputTokens: 1024,
         },
       },
       {
         headers: {
-          Authorization: `Bearer ${HUGGING_FACE_API_KEY}`,
           "Content-Type": "application/json",
         },
         timeout: 30000, // 30 second timeout
       }
     );
 
-    // Extract generated text
-    let generatedPoem = response.data[0]?.generated_text || "";
+    // Extract generated text from Gemini response
+    let generatedPoem = "";
+
+    if (
+      response.data.candidates &&
+      response.data.candidates[0] &&
+      response.data.candidates[0].content &&
+      response.data.candidates[0].content.parts &&
+      response.data.candidates[0].content.parts[0]
+    ) {
+      generatedPoem = response.data.candidates[0].content.parts[0].text;
+    } else {
+      throw new Error("Unexpected response format from Gemini API");
+    }
 
     // Clean up the poem
     generatedPoem = cleanPoem(generatedPoem);
@@ -91,16 +109,31 @@ app.post("/api/generate-poem", async (req, res) => {
 
     // Handle different error types
     if (error.response) {
-      // Hugging Face API error
-      if (error.response.status === 503) {
-        return res.status(503).json({
+      // Gemini API error
+      const status = error.response.status;
+      const errorData = error.response.data;
+
+      console.error("Gemini API Error:", errorData);
+
+      if (status === 400) {
+        return res.status(400).json({
           error:
-            "The AI model is currently loading. Please try again in a few moments.",
-          retryAfter: 20,
+            "Invalid request to AI service. Please try a different prompt.",
         });
-      } else if (error.response.status === 401) {
+      } else if (status === 401 || status === 403) {
         return res.status(500).json({
           error: "Authentication failed. Please check server configuration.",
+        });
+      } else if (status === 429) {
+        return res.status(429).json({
+          error: "Too many requests. Please wait a moment and try again.",
+          retryAfter: 10,
+        });
+      } else if (status === 503) {
+        return res.status(503).json({
+          error:
+            "The AI service is temporarily unavailable. Please try again in a moment.",
+          retryAfter: 20,
         });
       } else {
         return res.status(500).json({
@@ -124,17 +157,41 @@ app.post("/api/generate-poem", async (req, res) => {
 // Helper function to build themed prompts
 function buildPrompt(userInput, theme) {
   const themeContexts = {
-    lovelines: `Write a heartfelt, romantic love poem (5 lines) about: ${userInput}. 
-Make it sweet, emotional, and expressive. Focus on feelings of love, affection, and tenderness.
-Poem:`,
+    lovelines: `You are a romantic poet. Write a beautiful, heartfelt love poem (exactly 5 lines) about: ${userInput}
 
-    moodverse: `Write an emotional poem (5 lines) capturing these feelings: ${userInput}. 
-Reflect the mood authentically, whether joyful, melancholic, anxious, or peaceful.
-Poem:`,
+Requirements:
+- Make it sweet, emotional, and expressive
+- Focus on feelings of love, affection, and tenderness
+- Use romantic and poetic language
+- Keep it to exactly 5 lines
+- Don't include a title
+- Make each line flow naturally
 
-    soulscript: `Write an inspiring, reflective affirmation poem (5 lines) about: ${userInput}. 
-Make it uplifting, motivational, and soul-nourishing. Focus on inner strength and personal growth.
-Poem:`,
+Write the poem now:`,
+
+    moodverse: `You are an emotional poet. Write a deeply emotional poem (exactly 5 lines) that captures these feelings: ${userInput}
+
+Requirements:
+- Reflect the mood authentically and powerfully
+- Whether joyful, melancholic, anxious, or peaceful - capture it fully
+- Use vivid, evocative language
+- Keep it to exactly 5 lines
+- Don't include a title
+- Make each line meaningful
+
+Write the poem now:`,
+
+    soulscript: `You are an inspirational poet. Write an uplifting, reflective affirmation poem (exactly 5 lines) about: ${userInput}
+
+Requirements:
+- Make it inspiring, motivational, and soul-nourishing
+- Focus on inner strength, personal growth, and positivity
+- Use empowering and affirming language
+- Keep it to exactly 5 lines
+- Don't include a title
+- Make each line resonate
+
+Write the poem now:`,
   };
 
   return themeContexts[theme] || themeContexts["moodverse"];
@@ -145,21 +202,26 @@ function cleanPoem(text) {
   // Remove extra whitespace
   text = text.trim();
 
-  // Remove incomplete sentences at the end
-  const sentences = text.split(/[.!?]/);
-  if (
-    sentences.length > 1 &&
-    sentences[sentences.length - 1].trim().length < 10
-  ) {
-    sentences.pop();
-    text = sentences.join(". ") + ".";
+  // Remove markdown formatting if present
+  text = text.replace(/\*\*/g, "");
+  text = text.replace(/\*/g, "");
+
+  // Remove any "Here's" or "Here is" introductions
+  text = text.replace(/^(Here's|Here is|Here's a|Here is a).*?:\s*/i, "");
+
+  // Remove any title lines that might be present
+  text = text.replace(/^(Title|Poem):.*?\n/gi, "");
+
+  // Split into lines and take only the first 5-6 substantial lines
+  let lines = text.split("\n").filter((line) => line.trim().length > 0);
+
+  // If we have more than 6 lines, take the first 5
+  if (lines.length > 6) {
+    lines = lines.slice(0, 5);
   }
 
-  // Format with line breaks (assuming each sentence is a line)
-  text = text.replace(/\.\s+/g, ".\n");
-
-  // Remove any leftover prompt text
-  text = text.replace(/^(Write|Poem|Create).*?:/gi, "");
+  // Join back together
+  text = lines.join("\n");
 
   return text.trim();
 }
@@ -175,6 +237,7 @@ app.use((req, res) => {
 app.listen(PORT, () => {
   console.log("╔═══════════════════════════════════════╗");
   console.log("║     MuseMind Backend Server          ║");
+  console.log("║        (Powered by Gemini AI)        ║");
   console.log("╚═══════════════════════════════════════╝");
   console.log(`✅ Server running on http://localhost:${PORT}`);
   console.log(`✅ Health check: http://localhost:${PORT}/api/health`);

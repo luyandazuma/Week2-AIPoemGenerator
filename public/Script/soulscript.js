@@ -1,25 +1,71 @@
-let soulScriptCardElement = document.querySelector("#form-group");
-soulScriptCardElement.addEventListener("submit", callApi);
+const API_BASE_URL = "http://localhost:3000/api";
 
-function callApi(event) {
+let soulScriptFormElement = document.querySelector("#form-group");
+soulScriptFormElement.addEventListener("submit", generateSoulPoem);
+
+function generateSoulPoem(event) {
   event.preventDefault();
-  let userInputFeelings = document.querySelector(
-    "#user-input-feelings"
-  );
-  let prompt = `User instructions: Generate a five line English poem about ${userInputFeelings.value} in basic HTML format. Do not add a poem title.`;
-  let context = `You are a poet who writes affirming poems that encourages and grounds the receipient. Use the descriptions provided by the user ${userInputFeelings.value} to create a poem that positively influences their mindset, emotions and behaviour. Follow user instructions.`;
 
+  let userInputElement = document.querySelector("#user-input-feelings");
+  let poemElement = document.querySelector("#poem");
+  let userInput = userInputElement.value.trim();
+
+  // Validation
+  if (!userInput) {
+    poemElement.innerHTML = "Please share what you'd like affirmation for! 🌟";
+    return;
+  }
+
+  // Show loading animation
   new Typewriter("#poem", {
-    strings: `Generating 🥚🐣🐥`,
+    strings: "Writing your soul affirmation... 🌟💫✨",
     autoStart: true,
     delay: 20,
+    cursor: "",
   });
-  axios.get(apiUrl).then(generatePoem);
+
+  // Call backend API
+  fetch(`${API_BASE_URL}/generate-poem`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      userInput: userInput,
+      theme: "soulscript",
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        return response.json().then((err) => {
+          throw new Error(err.error || "Failed to generate poem");
+        });
+      }
+      return response.json();
+    })
+    .then((data) => {
+      displayPoem(data.poem);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      poemElement.innerHTML = `
+      <em style="color: #e74c3c;">
+        ❌ ${error.message}<br><br>
+        Please try again or contact support if the issue persists.
+      </em>
+    `;
+    });
 }
 
-function generatePoem(response) {
+function displayPoem(poemText) {
+  const poemElement = document.querySelector("#poem");
+
+  // Format the poem with line breaks
+  const formattedPoem = poemText.replace(/\n/g, "<br>");
+
+  // Display with typewriter effect
   new Typewriter("#poem", {
-    strings: response.data.answer,
+    strings: formattedPoem,
     autoStart: true,
     delay: 20,
     cursor: "",
