@@ -8,7 +8,8 @@ MuseMind is an AI-powered web application that transforms your feelings, emotion
 
 Have you ever felt something deeply but could not find the words to express it? That’s where MuseMind fits in, in the quiet spaces between emotion and language.  
 
-We wanted to build something that does not just generate text, but **transforms feeling into form**. MuseMind explores how AI can become a creative partner, helping anyone find the words to give what is in their heart artistic shape through language.
+We wanted to build something that does not just generate text, but **transforms feeling into form**. MuseMind explores how AI can become a creative partner, helping anyone find the words to give what is in their heart artistic shape through language.  
+**Live Demo:** https://transcendent-croissant-e3163c.netlify.app/ 
 
 
 ## Features
