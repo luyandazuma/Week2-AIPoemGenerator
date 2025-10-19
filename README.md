@@ -11,7 +11,8 @@ Have you ever felt something deeply but could not find the words to express it? 
 We wanted to build something that does not just generate text, but **transforms feeling into form**. MuseMind explores how AI can become a creative partner, helping anyone find the words to give what is in their heart artistic shape through language.   
 
 **Try MuseMind now - No installation required!**  
-🔗 **Live Demo:** https://transcendent-croissant-e3163c.netlify.app/  
+🔗 **Live Demo:** [MuseMind
+](https://transcendent-croissant-e3163c.netlify.app/) 
 
 Click the link above to start creating personalised poems! 💕🎨🌟
 
