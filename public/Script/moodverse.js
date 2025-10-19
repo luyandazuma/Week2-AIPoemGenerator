@@ -1,11 +1,11 @@
-const API_BASE_URL = 'https://musemind.onrender.com';
+const API_BASE_URL = "https://musemind.onrender.com/api";
 
 let moodVerseFormElement = document.querySelector("#form-group");
 moodVerseFormElement.addEventListener("submit", generateMoodPoem);
 
 function generateMoodPoem(event) {
   event.preventDefault();
-  
+
   let userInputElement = document.querySelector("#user-input-feelings");
   let poemElement = document.querySelector("#poem");
   let userInput = userInputElement.value.trim();
@@ -26,43 +26,43 @@ function generateMoodPoem(event) {
 
   // Call backend API
   fetch(`${API_BASE_URL}/generate-poem`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       userInput: userInput,
-      theme: 'moodverse'
+      theme: "moodverse",
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        return response.json().then((err) => {
+          throw new Error(err.error || "Failed to generate poem");
+        });
+      }
+      return response.json();
     })
-  })
-  .then(response => {
-    if (!response.ok) {
-      return response.json().then(err => {
-        throw new Error(err.error || 'Failed to generate poem');
-      });
-    }
-    return response.json();
-  })
-  .then(data => {
-    displayPoem(data.poem);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    poemElement.innerHTML = `
+    .then((data) => {
+      displayPoem(data.poem);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      poemElement.innerHTML = `
       <em style="color: #e74c3c;">
         ❌ ${error.message}<br><br>
         Please try again or contact support if the issue persists.
       </em>
     `;
-  });
+    });
 }
 
 function displayPoem(poemText) {
   const poemElement = document.querySelector("#poem");
-  
+
   // Format the poem with line breaks
-  const formattedPoem = poemText.replace(/\n/g, '<br>');
-  
+  const formattedPoem = poemText.replace(/\n/g, "<br>");
+
   // Display with typewriter effect
   new Typewriter("#poem", {
     strings: formattedPoem,

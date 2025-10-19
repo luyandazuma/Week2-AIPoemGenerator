@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://musemind.onrender.com';
+const API_BASE_URL = 'https://musemind.onrender.com/api';
 
 let loveLinesFormElement = document.querySelector("#form-group");
 loveLinesFormElement.addEventListener("submit", generateLovePoem);
