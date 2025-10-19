@@ -48,6 +48,27 @@ Responsive Design - Works seamlessly on desktop, tablet, and mobile devices.
 | **SoulScript** (Purples, muted tones and background) | Affirming and kind words to positively influence one's sense of self. | Assuring, uplifting and gentle. |
 
 
+## 📷 Preview
+
+Landing page: 
+<img width="1340" height="591" alt="2025-10-18 (9)" src="https://github.com/user-attachments/assets/ffa1da0c-f263-4cdb-baf4-fe58f5d1adc6" />
+*Users are prompted to click on the type of poem they want from the three given options*
+
+LoveLines Theme Landing Page (all Theme Pages have the same format/structure and functionality)
+<img width="1339" height="610" alt="2025-10-18 (8)" src="https://github.com/user-attachments/assets/892a9a76-56e3-47a5-8e47-0c688f9f75dd" />
+*If there is no prompt, the user will be prompted to add text*
+
+LoveLines- Generated Poem 
+<img width="1323" height="598" alt="2025-10-18 (11)" src="https://github.com/user-attachments/assets/2ca40f8f-49cc-4ede-a5ff-2f9173ef1266" />
+*After a poem is generated, users can <strong>Select and Copy</strong> poem to paste onto the Clipboard or message. Users can also regenerate another poem by clicking the "Generate" button again*
+
+MoodVerse- Generated Poem 
+<img width="1349" height="617" alt="2025-10-18 (14)" src="https://github.com/user-attachments/assets/6efd7da1-9504-42cd-974f-6fb1bfbcd601" />
+
+SoulScript- Generated Poem
+<img width="1343" height="599" alt="2025-10-18 (17)" src="https://github.com/user-attachments/assets/6f45fe8d-d85e-4ead-ae7c-2d06f492000b" />
+
+
 ## ⛓ Tech Stack
 
 **Frontend:**  
@@ -123,23 +144,6 @@ The frontend will run on http://localhost:8080.
 **6. Open in Browser**  
 Navigate to http://localhost:8080 and start creating poems!
 
-Landing page: 
-<img width="1340" height="591" alt="2025-10-18 (9)" src="https://github.com/user-attachments/assets/ffa1da0c-f263-4cdb-baf4-fe58f5d1adc6" />
-*Users are prompted to click on the type of poem they want from the three given options*
-
-LoveLines Theme Landing Page (all Theme Pages have the same format/structure and functionality)
-<img width="1339" height="610" alt="2025-10-18 (8)" src="https://github.com/user-attachments/assets/892a9a76-56e3-47a5-8e47-0c688f9f75dd" />
-*If there is no prompt, the user will be prompted to add text*
-
-LoveLines- Generated Poem 
-<img width="1323" height="598" alt="2025-10-18 (11)" src="https://github.com/user-attachments/assets/2ca40f8f-49cc-4ede-a5ff-2f9173ef1266" />
-*After a poem is generated, users can <strong>Select and Copy</strong> poem to paste onto the Clipboard or message. Users can also regenerate another poem by clicking the "Generate" button again*
-
-MoodVerse- Generated Poem 
-<img width="1349" height="617" alt="2025-10-18 (14)" src="https://github.com/user-attachments/assets/6efd7da1-9504-42cd-974f-6fb1bfbcd601" />
-
-SoulScript- Generated Poem
-<img width="1343" height="599" alt="2025-10-18 (17)" src="https://github.com/user-attachments/assets/6f45fe8d-d85e-4ead-ae7c-2d06f492000b" />
 
 ## 🚀 Deployment
 
