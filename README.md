@@ -120,7 +120,7 @@ npx http-server -p 8080
 Or use the Live Server extension in VS Code.  
 The frontend will run on http://localhost:8080.
 
-**6. Open in Browser**
+**6. Open in Browser**  
 Navigate to http://localhost:8080 and start creating poems!
 
 Landing page: 
