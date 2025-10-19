@@ -10,7 +10,7 @@ Have you ever felt something deeply but could not find the words to express it? 
 
 We wanted to build something that does not just generate text, but **transforms feeling into form**. MuseMind explores how AI can become a creative partner, helping anyone find the words to give what is in their heart artistic shape through language.   
 
-**✨ Try MuseMind now - No installation required!**  
+**Try MuseMind now - No installation required!**  
 🔗 **Live Demo:** https://transcendent-croissant-e3163c.netlify.app/  
 
 Click the link above to start creating personalised poems! 💕🎨🌟
@@ -44,7 +44,7 @@ Responsive Design - Works seamlessly on desktop, tablet, and mobile devices.
 | Theme | Description | Tone |
 |-------|--------|-------------|
 | **LoveLines** (Pinks, roses and whites) | Heartfelt poems for loved ones. |  Romantic, emotional, and warm. |
-| **MoodVerse** (Neon pinks, cyans, deep purples) | Expressive poems based on your current feelings or mood | Emotive and expressive. 
+| **MoodVerse** (Neon pinks, cyans, deep purples) | Expressive poems based on your current feelings or mood. | Emotive and expressive. 
 | **SoulScript** (Purples, muted tones and background) | Affirming and kind words to positively influence one's sense of self. | Assuring, uplifting and gentle. |
 
 
@@ -118,7 +118,7 @@ npx http-server -p 8080
 ```
 
 Or use the Live Server extension in VS Code.  
-The frontend will run on http://localhost:8080
+The frontend will run on http://localhost:8080.
 
 **6. Open in Browser**
 Navigate to http://localhost:8080 and start creating poems!
@@ -145,25 +145,25 @@ SoulScript- Generated Poem
 
 This project is deployed using:
 
-- **Frontend:** Netlify (serves static files from `public/` folder)
-- **Backend:** Render (Node.js/Express server from `server/` folder)
+- **Frontend:** Netlify (serves static files from `public/` folder).
+- **Backend:** Render (Node.js/Express server from `server/` folder).
 
 ### Deploy Your Own Instance:
 
 **Backend (Render):**
-1. Create an account at render.com  
-2. New Web Service → Connect Git repo  
-3. Root Directory: `server`  
-4. Build: `npm install`  
-5. Start: `npm start`  
-6. Add `GEMINI_API_KEY` environment variable  
+1. Create an account at [Render](https://render.com/). 
+2. New Web Service → Connect Git repo. 
+3. Root Directory: `server`.  
+4. Build: `npm install`.  
+5. Start: `npm start`.  
+6. Add `GEMINI_API_KEY` environment variable.  
 
 **Frontend (Netlify):**
-1. Create an account at netlify.com  
-2. Import from Git or drag `public/` folder  
-3. Base Directory: `public`  
-4. Publish Directory: `public`  
-5. Update API URLs in JS files to point to your backend
+1. Create an account at [Netlify](https://www.netlify.com/).  
+2. Import from Git or drag the `public/` folder.  
+3. Base Directory: `public`. 
+4. Publish Directory: `public`.  
+5. Update API URLs in JS files to point to your backend.
 
 
 ## 📂 API Documentation
@@ -184,14 +184,14 @@ Content-Type: application/json
 
 Body:
 {
-  "userInput": "string",  // User's feelings or thoughts
+  "userInput": "string",  // User's feelings or thoughts.
   "theme": "string"       // "lovelines" | "moodverse" | "soulscript"
 }
 
 Response:
 {
   "success": true,
-  "poem": "string",       // Generated poem text
+  "poem": "string",       // Generated poem text.
   "theme": "string",
   "timestamp": "string"
 }
@@ -202,27 +202,27 @@ Response:
 
 ```
 Week2-AIPoemGenerator/
-├── public/                   # Frontend files
-│   ├── index.html            # Landing page
-│   ├── lovelines.html        # LoveLines theme page
-│   ├── moodverse.html        # MoodVerse theme page
-│   ├── soulscript.html       # SoulScript theme page
+├── public/                   # Frontend files.
+│   ├── index.html            # Landing page.
+│   ├── lovelines.html        # LoveLines theme page.
+│   ├── moodverse.html        # MoodVerse theme page.
+│   ├── soulscript.html       # SoulScript theme page.
 │   ├── styles/
-│   │   ├── styles.css        # Base styles
-│   │   └── themes.css        # Theme-specific styles
+│   │   ├── styles.css        # Base styles.
+│   │   └── themes.css        # Theme-specific styles.
 │   └── Script/
-│       ├── landing.js        # Landing page logic
-│       ├── lovelines.js      # LoveLines functionality
-│       ├── moodverse.js      # MoodVerse functionality
-│       └── soulscript.js     # SoulScript functionality
+│       ├── landing.js        # Landing page logic.
+│       ├── lovelines.js      # LoveLines functionality.
+│       ├── moodverse.js      # MoodVerse functionality.
+│       └── soulscript.js     # SoulScript functionality.
 │
-├── server/                  # Backend files
-│   ├── server.js            # Express server & API logic
-│   ├── package.json         # Dependencies
-│   ├── .env.example         # Environment variables template
-│   └── .gitignore           # Git ignore rules
+├── server/                  # Backend files.
+│   ├── server.js            # Express server & API logic.
+│   ├── package.json         # Dependencies.
+│   ├── .env.example         # Environment variables template.
+│   └── .gitignore           # Git ignore rules.
 │               
-└── README.md                # This file
+└── README.md                # This file.
 ```
 
 
@@ -233,8 +233,10 @@ Week2-AIPoemGenerator/
 ✔️ Regenerate API keys if accidentally exposed.  
 ✔️ Use environment variables for all secrets.  
 
+
 ## 📄 License
 This project was created as part of a coding bootcamp group's generative AI project.
+
 
 ## 📞 Support
 If you encounter any issues:
@@ -249,10 +251,10 @@ If you encounter any issues:
 | Member | Role | Responsibilities |
 |---------|------|------------------|
 | **Aobakwe Modillane** | Frontend Developer. | Web content creation and page styling. |
-| **Boikanyo Maswi** | Junior Developer. | README.md, interactivity and user input handling, GitHub About section |
+| **Boikanyo Maswi** | Junior Developer. | README.md, interactivity and user input handling, GitHub About section. |
 | **Luyanda Zuma** | Scrum Master. | Project management, repository setup, interactivity and user input handling, documentation. |
 | **Nqobile Masombuka** | Fullstack Developer. | Page styling, Backend Integration & API Development, Application deployment, documentation, README.md. |
 
-<h3>Made with 💜 by Git Girls</h3>  
+<h3>Made with 💜 by Git Girls.</h3>  
 <em>Transform your emotions into poetry. One verse at a time.</em>
 
